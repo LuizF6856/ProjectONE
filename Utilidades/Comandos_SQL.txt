@@ -1,0 +1,132 @@
+* = tudo, ou seja, ele vai mostrar tudo que está na tabela
+serial =  serial é para o id ser inserido automaticamente.
+timestamp = formato de horario
+varchar() = limite de caractere
+int reference = referencia de uma tabela
+
+- GUIA - 
+
+1 - CRIANDO TABELA
+2 - ADICIONANDO COLUNAS
+3 - INSERINDO DADOS
+4 - ALTERANDO DADOS
+5 - REMOVENDO 
+6 - CONSULTAS
+
+
+1 - CRIANDO TABELA  - 
+
+CREATE TABLE nomedatabela(
+    id serial,  
+    name varchar(100), 
+    ChaveEstrangeira int reference NomeDaOutraTabela(ChavePrimaria), 
+    data_criacao timestamp 
+);
+
+2 - ADICIONANDO COLUNAS -
+
+ALTER TABLE nomedatabela ADD NomeDaColuna typedacoluna;
+
+3 - INSERIR REGISTROS NA TABELA -
+
+INSERT INTO nomedatabela(NomeDaColuna, NomeDaOutraColuna ... ) 
+VALUES (value1,value2);
+
+4 - ALTERANDO DADOS -
+
+- ATUALIZANDO UM DADO -
+
+UPDATE nomedatabela SET NomeDaColuna = valor; 
+#Caso não especificar, a coluna inteira vai ser alterada.
+
+UPDATE nomedatabela SET NomeDaColuna = valor WHERE id = id_da_linha;
+
+- MUDANDO O NOME DA TABELA E COLUNA  - 
+
+ALTER TABLE nomedatabela RENAME TO TabelaNova;
+
+ALTER TABLE nomedatabela RENAME ColunaAntiga TO ColunaNova;
+
+5 - REMOVENDO - 
+
+- TABELA - 
+
+DROP TABLE nomedatabela;
+
+- COLUNA -
+
+ALTER TABLE nomedatabela DROP COLUMN NomeDaColuna;
+
+- LINHA -
+
+DELETE FROM nomedatabela WHERE NomeDaColuna = id;
+
+6 - CONSULTAS -
+    1 - WHERE
+    2 - ORDER BY
+    3 - INNER JOIN ON
+
+- TABELA -
+
+SELECT * FROM nomedatabela;
+
+- UMA COLUNA - 
+
+SELECT NomeDaColuna FROM nomedatabela;
+
+- DUAS/TRÊS COLUNAS -
+
+SELECT NomeDaColuna,NomeDaOutraColuna FROM nomedatabela;
+
+1 - ESPECIFICANDO A CONSULTA - 
+
+- POR ID/NOME/IDADE -
+
+SELECT * FROM nomedatabela WHERE id = id_da_linha;
+
+SELECT * FROM nomedatabela WHERE nome = nomeDousuario;
+
+- MAIORES e MENORES DE IDADE -
+
+SELECT * FROM nomedatabela WHERE idade >= 18;
+
+SELECT * FROM nomedatabela WHERE idade <= 18;
+
+2 - ORDENANDO - 
+
+- POR ID/NOME/IDADE... - 
+
+SELECT * FROM nomedatabela
+    ORDER BY id; # Ficará de forma crescente
+    ORDER BY id DESC; # Em ordem decrescente
+
+SELECT * FROM nomedatabela 
+    ORDER BY nome; # Ordem alfabetica crescente
+    ORDER BY nome DESC; # Ordem alfabetica decrescente
+
+3 - JUNTANDO TABELAS -
+
+SELECT * FROM nomedatabela INNER JOIN NomeDaOutraTabela 
+    ON nomedatabela.ChaveEstrangeira = NomeDaOutraTabela.ChavePrimaria;
+
+7 - FUNÇÕES DO LIVRO -
+
+- MAIOR OU MENOR DE IDADE -
+
+create or replace function
+retornar_id_pares(par_id int)
+returns text as 
+$$
+declare
+nome    text;
+idade     int;
+begin
+select name,age into nome, idade from users where id = par_id;
+if idade >= 18 then
+return nome || ' é maior de idade';
+else
+return nome || ' é menor de idade';
+end if;
+end
+$$
+language plpgsql;
