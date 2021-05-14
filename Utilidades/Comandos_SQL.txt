@@ -1,17 +1,21 @@
-* = tudo, ou seja, ele vai mostrar tudo que está na tabela
-serial =  serial é para o id ser inserido automaticamente.
-timestamp = formato de horario
-varchar() = limite de caractere
-int reference = referencia de uma tabela
-
 - GUIA - 
 
+0 - SIGNIFICADO DE ALGUNS COMANDOS
 1 - CRIANDO TABELA
 2 - ADICIONANDO COLUNAS
 3 - INSERINDO DADOS
 4 - ALTERANDO DADOS
 5 - REMOVENDO 
 6 - CONSULTAS
+7 - FUNÇÕES DO LIVRO
+
+0 - SIGNIFICADO DE ALGUNS COMANDOS -
+
+* = tudo, ou seja, ele vai mostrar tudo que está na tabela
+serial =  serial é para o id ser inserido automaticamente.
+timestamp = formato de horario
+varchar() = limite de caractere
+int reference = referencia de uma tabela
 
 
 1 - CRIANDO TABELA  - 
