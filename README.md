@@ -1,4 +1,4 @@
-                                                 - GUIA PARA COMANDOS_SQL - 
+                                               - GUIA PARA COMANDOS_SQL - 
 
 0 - SIGNIFICADO DE ALGUNS COMANDOS - 
 https://github.com/LuizF6856/ProjectONE/blob/588448acebcf2db1dc840776062a7e37848ce302/Utilidades/Comandos_SQL.txt#L12
