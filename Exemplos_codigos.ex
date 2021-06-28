@@ -154,3 +154,13 @@ defmodule Nome do
     if password == 1234 || nome == "Felipe", do: "Bem vindo "<>nome,else: "-SENHA ERRADA-" 
     def chamar(password,nome), do: name?(password, nome)
 end
+
+ def print_name(name) do
+     IO.puts name
+     Enum.each(0.. 3, &IO.inspect/1 )
+ end 
+
+
+ defmodule Match do 
+    def numbers(number), do: number == 2
+ end
