@@ -84,3 +84,10 @@ case :tiago do
 10 -> "Será?"
 :tiago -> "casou!"
 end
+
+defmodule Regulares do
+    def lista?(numeros) do
+       lista = Regex.split(~R//, numeros) 
+       lista
+    end
+end
