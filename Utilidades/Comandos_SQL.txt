@@ -25,7 +25,7 @@ CREATE TABLE nomedatabela(
     name varchar(100), 
     ChaveEstrangeira int reference NomeDaOutraTabela(ChavePrimaria), 
     data_criacao timestamp 
-);aaa
+);
 
 2 - ADICIONANDO COLUNAS -
 
