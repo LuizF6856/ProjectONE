@@ -4,7 +4,7 @@
 
 ## Installation
 
-if[available in Hex](https://hex.pm/docs/publish), the package can be installed
+if [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `projectone` to yout list of dependencies in `mix.exs`:
 
 ```elixir
