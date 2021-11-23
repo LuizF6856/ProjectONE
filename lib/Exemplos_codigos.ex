@@ -17,19 +17,14 @@ end
 
 # # Usei if, parametros e numeros randonicos 
 
-defmodule Testando_if do
+defmodule App.Testando_if do
   defp multiplicar(numero, numero1) do
-    random = :rand.uniform(numero)
-    random1 = :rand.uniform(numero1)
-    total = random * random1
-    IO.puts("#{random} x #{random1} = #{total}")
+    IO.puts("#{numero} x #{numero1} = #{numero*numero1}")
   end
 
   defp somar(numero, numero1) do
-    random = :rand.uniform(numero)
-    random1 = :rand.uniform(numero1)
-    total = random + random1
-    IO.puts("#{random} + #{random1} = #{total}")
+    total = numero + numero1
+    IO.puts("#{numero} + #{numero1} = #{total}")
   end
 
   def chamar(operacao, numero, numero1) do
