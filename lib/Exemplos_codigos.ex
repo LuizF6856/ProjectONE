@@ -21,17 +21,17 @@ end
 defmodule SomarEmultiplicar do
   defp multiplicar(numero, numero1) do
     if(is_integer(numero) and is_integer(numero1)) do
-      IO.puts("#{numero} x #{numero1} = #{numero*numero1}")
-    else
-      "apenas numeros"
+        numero * numero1
+      else
+        "apenas numeros"
     end
   end
 
   defp somar(numero, numero1) do
       if(is_integer(numero) and is_integer(numero1)) do
-        IO.puts("#{numero} + #{numero1} = #{numero+numero1}")
-      else
-        "apenas numeros"
+          numero + numero1
+        else
+          "apenas numeros"
       end
   end
 
