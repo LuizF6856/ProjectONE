@@ -1,11 +1,12 @@
 # # Esse arquivo é utilizado como deposito de funções , caso esqueça de algo.
 # # Estou atualizando, melhorando e mudando os codigos
 
-# # Dando um olá de uma forma mais interativa:
+# Dando um olá de uma forma mais interativa:
 
 defmodule App.Hello do
   def getname do
-    yourname = IO.gets("seu nome?")
+    yourname =
+      IO.gets("seu nome?")
 
     name =
       yourname
@@ -15,25 +16,35 @@ defmodule App.Hello do
   end
 end
 
-# # Usei if, parametros e numeros randonicos 
+# Usando if, parametros e comunicação entre funções
 
-defmodule App.Testando_if do
+defmodule SomarEmultiplicar do
   defp multiplicar(numero, numero1) do
-    IO.puts("#{numero} x #{numero1} = #{numero*numero1}")
+    if(is_integer(numero) and is_integer(numero1)) do
+      IO.puts("#{numero} x #{numero1} = #{numero*numero1}")
+    else
+      "apenas numeros"
+    end
   end
 
   defp somar(numero, numero1) do
-    total = numero + numero1
-    IO.puts("#{numero} + #{numero1} = #{total}")
+      if(is_integer(numero) and is_integer(numero1)) do
+        IO.puts("#{numero} + #{numero1} = #{numero+numero1}")
+      else
+        "apenas numeros"
+      end
   end
 
   def chamar(operacao, numero, numero1) do
-    if(operacao == "somar") do
-      somar(numero, numero1)
-    end
-
-    if(operacao == "multiplicar") do
-      multiplicar(numero, numero1)
+    cond do 
+      operacao == "somar" 
+        -> somar(numero, numero1)
+      
+      operacao == "multiplicar"
+         -> multiplicar(numero, numero1)
+      
+      true
+         -> "apenas somar e multiplicar"
     end
   end
 end
