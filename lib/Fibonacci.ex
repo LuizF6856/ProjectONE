@@ -1,16 +1,3 @@
-#  Fibonacci Modelo 1(não funcional)
-#  defmodule Fibonacci do 
-#      def fibo(fnn) do
-#          if fnn < 2 do
-#              fnn
-#          else
-#              fnn - 1 + fnn - 2
-#          end
-#      end
-#  end
-
-# Modelo 2(funcional)
-
 defmodule Fibonacci do
     def fib(0), do: 0
     def fib(1), do: 1
