@@ -1,9 +1,12 @@
 defmodule Fibonacci do
     def fib(0), do: 0
-    def fib(1), do: 1
+    def fib(1), do: 
+        #IO.inspect(1)
+        1
 
     def fib(num) do
         if(is_integer(num)) do
+
             fib(num - 1) + fib(num - 2)
         else
             false
