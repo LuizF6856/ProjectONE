@@ -16,7 +16,7 @@ defmodule App.Hello do
   end
 end
 
-# Usando if, parametros e comunicação entre funções
+# Usando if, cond, parametros e comunicação entre funções
 
 defmodule SomarEmultiplicar do
   defp multiplicar(numero, numero1) do
@@ -90,15 +90,16 @@ end
 
 # # aprendendo a usar listas/ em fase de testes
 
-# defmodule List do
-#   def soma([head | tail], acumulador) do
-#     soma(tail, head + acumulador)
-#   end
+defmodule List.With.Recursion do
+  def soma([head | tail], acumulador) do
+    IO.inspect([head | tail])
+    IO.inspect(acumulador)
 
-#   def soma(tail, acumulador) do
-#     acumulador
-#   end
-# end
+    soma(tail, head + acumulador)
+  end
+
+  def soma(tail, acumulador), do: acumulador
+end
 
 # # #Teste de mesa do modulo acima
 
