@@ -1,18 +1,29 @@
-# defmodule Calculadora do
-#   defp adicao(num, num1), do: num + num1
-#   defp subtracao(num, num1), do: num - num1
-#   defp multiplicacao(num, num1), do: num * num1
-#   defp divisao(num, num1), do: num / num1
+defmodule CalculadoraV2 do
 
-#   def operador(num, operador, num1) do
-#     case operador do
-#       "+" -> adicao(num, num1)
-#       "-" -> subtracao(num, num1)
-#       "*" -> multiplicacao(num, num1)
-#       "/" -> divisao(num, num1)
-#       _ -> "Apenas operadores basicos(+,-, *, /)"
-#     end
-#   end
-# end
+    defp somar(n, n1), do: n + n1
 
-# Calculadora.operador(2, "+", 2)
+    defp subtrair(n, n1), do: n - n1
+
+    defp multiplicar(n, n1), do: n * n1
+
+    defp dividir(n, n1), do: n / n1
+
+    def operador(opr, n, n1) do
+        cond do
+            opr == "somar"
+                -> somar(n, n1)
+
+            opr == "subtrair"
+                -> subtrair(n, n1)
+
+            opr == "multiplicar"
+                -> multiplicar(n, n1)
+
+            opr == "dividir"
+                -> dividir(n, n1)
+
+            true -> 
+                "Apenas somar, subtrair, multiplicar e dividir"
+        end
+    end
+end
