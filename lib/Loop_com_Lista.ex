@@ -12,10 +12,10 @@
 
 # # PATTERN MATCHING
 
-# defmodule List do
-#   def soma([head | tail], acumulador), do: soma(tail, head + acumulador)
-#   def soma([], acumulador), do: acumulador
-# end
+defmodule List do
+  def soma([head | tail], acumulador), do: soma(tail, head + acumulador)
+  def soma([], acumulador), do: acumulador
+end
 
 # # Para chamar o modulo, List.soma [1,2,3,4], 0
 
