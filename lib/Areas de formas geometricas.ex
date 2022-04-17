@@ -37,19 +37,3 @@ defmodule Formas_geometricas do
     end
   end
 end
-
-defmodule Formas_geometricas do
-  defp triangulo(base, altura),
-    do: "Base = #{base} e Altura = #{altura}, teremos a Area = #{base * altura / 2}"
-
-  defp quadrado(lado), do: "Com lado = #{lado}, teremos a Area = #{lado * lado}"
-
-  defp retangulo(base, altura),
-    do: "Base = #{base} e Altura = #{altura}, teremos a Area = #{base * altura}"
-
-  def forma(geometrica, param, param1) do
-    if(geometrica == "triangulo", do: triangulo(base, altura))
-    if geometrica == "quadrado", do: quadrado(lado)
-    if geometrica == "retangulo", do: retangulo(base, altura)
-  end
-end
