@@ -1,7 +1,7 @@
 defmodule Potencia do
   def lista(list) do
-    for n <- list do
-      n * n
+    for x <- list do
+      x * x
     end
   end
 end
