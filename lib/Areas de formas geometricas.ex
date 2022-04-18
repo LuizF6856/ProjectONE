@@ -1,7 +1,7 @@
 defmodule Formas_geometricas do
   @moduledoc """
     Calculando areas de formas geometricas com números aleatórios,
-    Dado um limite de numeros calcula a area sem passar desse limite.
+    Dado dois limite de numeros, calcula a area sem passar desse limite.
   """
 
   defp triangulo(b, h) do
