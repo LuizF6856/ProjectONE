@@ -24,7 +24,7 @@ defmodule App.CalculatorV2 do
        "/" ->
           divide(num, num1)
        _ ->
-        {:error, "only: sum/2, subtract/2, multiply/2, divide/2"}
+        {:error, "only: sum, subtract, multiply and divide"}
 
     end
   end
