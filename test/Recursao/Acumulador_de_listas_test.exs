@@ -5,10 +5,16 @@ defmodule App.Recursao.AcumuladorTest do
   @erro {:error, "Passe uma lista e um acumulador"}
 
   test "dado uma lista e um acumulador, retorna o total do acumulador" do
+    assert Recursao.Acumulador.soma([], 0) == 0
     assert Recursao.Acumulador.soma([1,2,3], 0) == 6
   end
 
-  describe "Testando outros elementos" do
+  test "elementos diferentes dentro da lista" do
+    assert Recursao.Acumulador.soma([1, "a", 2]) == @erro
+    assert Recursao.Acumulador.soma([:a, :atomo, []]) == @erro
+  end
+
+  describe "Testando outros tipos" do
     test "atomo" do
       assert Recursao.Acumulador.soma(:atomo) == @erro
     end
