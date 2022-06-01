@@ -1,4 +1,4 @@
-defmodule Area do
+defmodule App.Area do
   def triangulo(base, altura) when is_number(base) and is_number(altura) do
     {:ok, "O valor da base é #{base} e a altura é #{altura}, #{base * altura / 2}"}
   end

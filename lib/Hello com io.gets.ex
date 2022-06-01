@@ -1,4 +1,4 @@
-defmodule App do
+defmodule App.IOgets.Hello do
   def hello do
     nome =
       IO.gets("Qual seu nome?")

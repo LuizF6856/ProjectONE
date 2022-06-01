@@ -1,8 +1,8 @@
-defmodule Foo do
-  def p(0), do: IO.puts(0)
+defmodule App.Recursao.SequeciaNumerica do
+  def p(0), do: 0
 
-  def p(number) when is_integer(number) do
-    p(number - 1)
+  def p(number) do
     IO.puts(number)
+    p(number - 1)
   end
 end

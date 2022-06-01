@@ -1,4 +1,4 @@
-defmodule Calculadora do
+defmodule App.Calculadora do
   def somar(numero, numero_1) when is_number(numero) and is_number(numero_1),
     do: "#{numero} + #{numero_1} = #{numero + numero_1}"
 

@@ -1,4 +1,4 @@
-defmodule Formas_geometricas do
+defmodule App.Random.Area do
   @moduledoc """
     Calculando areas de formas geometricas com números aleatórios,
     Dado dois limite de numeros, calcula a area sem passar desse limite.

@@ -1,10 +1,7 @@
-defmodule Recursao_com_listas do
+defmodule App.Recursao.Acumulador do
   def soma([head | tail], acumulador) do
-    IO.inspect([head | tail])
-    IO.puts(acumulador)
-
     soma(tail, head + acumulador)
   end
 
-  def soma(tail, acumulador), do: acumulador
+  def soma(_tail, acumulador), do: acumulador
 end

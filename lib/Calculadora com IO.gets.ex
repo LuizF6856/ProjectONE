@@ -1,4 +1,4 @@
-defmodule App.CalculatorV2 do
+defmodule App.IOgets.Calculadora do
   def your_calculation do
     IO.gets("what would you like to calculate?\n")
     |> String.trim()

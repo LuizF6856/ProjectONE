@@ -1,7 +1,5 @@
-defmodule Potencia do
+defmodule App.For.Potencia do
   def lista(list) do
-    for x <- list do
-      x * x
-    end
+    for x <- list, do: x * x
   end
 end
