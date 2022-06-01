@@ -1,10 +1,7 @@
 defmodule Fibonacci do
   def fib(0), do: 0
-  def fib(1), do: 1
-
-  def fib(numero) when is_integer(numero) do
-    fib(numero - 1) + fib(numero - 2)
-  end
+  def fib(1), do: IO.inspect(1)
+  def fib(n), do: fib(n - 1) + fib(n - 2)
 end
 
 # Sequencia fibonacci:
