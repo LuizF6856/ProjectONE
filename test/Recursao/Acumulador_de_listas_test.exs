@@ -6,12 +6,14 @@ defmodule App.Recursao.AcumuladorTest do
 
   test "dado uma lista e um acumulador, retorna o total do acumulador" do
     assert Recursao.Acumulador.soma([], 0) == 0
-    assert Recursao.Acumulador.soma([1,2,3], 0) == 6
+    assert Recursao.Acumulador.soma([1, 2, 3], 0) == 6
   end
 
   test "elementos diferentes dentro da lista" do
     assert Recursao.Acumulador.soma([1, "a", 2]) == @erro
     assert Recursao.Acumulador.soma([:a, :atomo, []]) == @erro
+    assert Recursao.Acumulador.soma([%{}, {}, []]) == @erro
+    assert Recursao.Acumulador.soma(["world", {1, 2}, 'a']) == @erro
   end
 
   describe "Testando outros tipos" do
@@ -29,6 +31,10 @@ defmodule App.Recursao.AcumuladorTest do
 
     test "Float" do
       assert Recursao.Acumulador.soma(1.0) == @erro
+    end
+
+    test "testando charlist" do
+      assert Recursao.Acumulador.soma('c') == @erro
     end
   end
 end
