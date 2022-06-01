@@ -4,4 +4,6 @@ defmodule App.Recursao.Acumulador do
   end
 
   def soma(_tail, acumulador), do: acumulador
+
+  def  soma(_), do: {:error, "Passe uma lista e um acumulador"}
 end
